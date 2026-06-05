@@ -1,7 +1,10 @@
 {
-  "name": "prompt-asset-conductor",
+  "name": "@COMMENCINGTHESCOURGE/prompt-asset-conductor",
   "version": "0.1.0",
   "description": "Orchestrates writer/drawer/sound nodes as isolated subprocesses",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "main": "src/index.ts",
   "bin": {
     "prompt-asset": "./src/cli.ts"
@@ -11,11 +14,13 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "commander": "^12.0.0"
+    "commander": "^12.0.0",
+    "handlebars": "^4.7.9"
   },
   "devDependencies": {
     "@types/fs-extra": "^11.0.4",
     "@types/node": "^20.19.41",
+    "@vitest/coverage-v8": "^2.1.9",
     "typescript": "^5.6.0",
     "vitest": "^2.1.0"
   }
