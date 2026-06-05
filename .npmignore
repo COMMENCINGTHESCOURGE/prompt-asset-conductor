@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# Source files (published dist instead)
+src/
+tests/
+
+# Config
+tsconfig.json
+vitest.config.ts
+.gitignore
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*

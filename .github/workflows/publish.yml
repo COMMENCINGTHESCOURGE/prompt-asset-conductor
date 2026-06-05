@@ -1,28 +1,39 @@
-name: Publish Package to GitHub Packages
+name: Publish to GitHub Packages
 
 on:
   push:
     branches: [master]
+  release:
+    types: [created]
   workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: write
 
 jobs:
   publish:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: "20"
-          registry-url: "https://npm.pkg.github.com"
-          scope: "@COMMENCINGTHESCOURGE"
+          node-version: '20'
+          registry-url: https://npm.pkg.github.com
+          scope: '@COMMENCINGTHESCOURGE'
+
       - name: Install dependencies
-        run: npm install
-      - name: Build package
+        run: npm ci
+
+      - name: Build
         run: npm run build
-      - name: Publish to GitHub Packages
+
+      - name: Test
+        run: npm test
+
+      - name: Publish
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

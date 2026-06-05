@@ -5,10 +5,10 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
-  "main": "src/index.ts",
-  "bin": {
-    "prompt-asset": "./src/cli.ts"
-  },
+  "main": "dist/index.js",
+    "bin": {
+      "prompt-asset": "./dist/cli.js"
+    },
   "scripts": {
     "build": "tsc",
     "test": "vitest run"
