@@ -1,0 +1,22 @@
+{
+  "name": "prompt-asset-conductor",
+  "version": "0.1.0",
+  "description": "Orchestrates writer/drawer/sound nodes as isolated subprocesses",
+  "main": "src/index.ts",
+  "bin": {
+    "prompt-asset": "./src/cli.ts"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "commander": "^12.0.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^20.19.41",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  }
+}
