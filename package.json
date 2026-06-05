@@ -1,6 +1,6 @@
 {
   "name": "@COMMENCINGTHESCOURGE/prompt-asset-conductor",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Orchestrates writer/drawer/sound nodes as isolated subprocesses",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
